@@ -11,33 +11,28 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.marvelheroesapp.ui.theme.MarvelHeroesAppTheme
+import br.com.marvelheroesapp.ui.view.MarvelHeroesScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MarvelHeroesAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                }
+//                // A surface container using the 'background' color from the theme
+//                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+//                    Greeting("Android")
+//                }
+                MarvelHeroesScreen()
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-            text = "Hello $name!",
-            modifier = modifier
-    )
-}
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     MarvelHeroesAppTheme {
-        Greeting("Android")
+        MarvelHeroesScreen()
     }
 }
